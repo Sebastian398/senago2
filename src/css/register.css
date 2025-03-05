@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: url('../img/background.png');
+    background-size: cover;  /* Para que cubra toda la pantalla */
+    background-position: center center;  /* Para centrar la imagen */
+    color: black;
+}
+
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.senago {
+    border: 2px solid black; /* Borde negro */
+    background-color: white;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    opacity: 97%;
+}
+
+#login {
+    text-align: center;
+    background: #3aaa35;
+    border: 2px solid black; /* Borde negro */
+    
+}
+
+section {
+    min-height: 50vh;
+    padding: 4rem 3% 4rem;
+}
+
+.home2 {
+    display: flex;                    /* Usamos flexbox para alinear contenido */
+    justify-content: center;           /* Centra el contenido horizontalmente */
+    align-items: center;               /* Centra el contenido verticalmente */
+    background-color: #ffffffc7;
+    overflow: hidden;
+    position: relative;                /* Asegúrate de que el contenedor tenga la posición relativa */
+    height: 100%;                      /* Asegura que ocupe el 100% de la altura */
+}
+
+.home2 .home-content2 {
+    display: flex;                    /* Usamos flexbox para alinear contenido */
+    flex-direction: column;
+    justify-content: center;           /* Centra el contenido horizontalmente */
+    align-items: center;               /* Centra el contenido verticalmente */
+    height: 100%;                      /* Asegura que ocupe el 100% de la altura */
+    padding: 2rem;
+}
+
+.home2 .home-content2 h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home2 .home-content2 label {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home2 .home-content2 input {
+    width: 600px;
+    height: 40px;
+    font-size: 2rem;
+    line-height: 1.3;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.home2 .home-content2 a {
+    color: #333;
+    margin-top: 30px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fa-arrow-circle-right {
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+.fa-user {
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+.home2 .home-img2 {
+    display: flex;                    /* Usamos flexbox para alinear contenido */
+    flex-direction: column;
+    justify-content: center;           /* Centra el contenido horizontalmente */
+    align-items: center;               /* Centra el contenido verticalmente */
+    height: 100%;                      /* Asegura que ocupe el 100% de la altura */
+    padding: 2rem;
+}
+
+.home-img2 img {
+    position: relative;
+    width: 32vw;
+    border-radius: 10%;
+    transition: 0.2s linear;
+    animation: bounce 2s ease infinite;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#entrar {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    margin: 15px auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    background-color: #8e3997;
+    border-radius: 20px;
+}
+
+#entrar:hover {
+    cursor: pointer;
+    background-color: #72277a;
+    transition: 0.5s ease-in-out;
+}
+
+#entrar i {
+    transition: transform 0.5s ease-in-out; /* Transición para la animación */
+}
+
+#entrar:hover i {
+    transform: translateX(5px); /* Mueve la flecha hacia la derecha */
+}
+
+#admin {
+    width: 450px;
+    height: 60px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+#admin:hover {
+    cursor: pointer;
+    background-color: #252525;
+    transition: 0.5s ease-in-out;
+}
+
+#admin i {
+    transition: transform 0.5s ease-in-out; /* Transición para la animación */
+}
+
+#admin:hover i {
+    transform: translateX(5px); /* Mueve la flecha hacia la derecha */
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); } /* Al inicio y al final el ícono está en su posición original */
+    30% { transform: translateY(-10%); } /* Sube un poco */
+    50% { transform: translateY(0); }  /* Vuelve a la posición inicial */
+    70% { transform: translateY(-7%); } /* Sube un poco menos */
+    90% { transform: translateY(0); }  /* Vuelve a la posición inicial */
+}
+
+footer {
+    font-size: 3rem;
+    font-weight: 600;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+@media (max-width: 1660px) {
+    .home2 .home-content2 h1 {
+        font-size: 6.5rem;
+    }
+
+    .home-img2 img{
+        width: 25vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .senago {
+        margin-top: 44px;
+        margin-bottom: 44px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 5rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 3rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 400px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .home2 .home-content2 a {
+        color: #333;
+        margin-top: 30px;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    #entrar {
+        width: 280px;
+        height: 50px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #8e3997;
+        border-radius: 20px;
+    }
+
+    #admin {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border-radius: 20px;
+    }
+
+    .home-img2 img{
+        width: 25vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .senago {
+        margin-top: 55px;
+        margin-bottom: 55px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 4rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 2.8rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 300px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .senago {
+        margin-top: 65px;
+        margin-bottom: 65px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 3.5rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 2.6rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 300px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .home2 .home-content2 a {
+        color: #333;
+        margin-top: 30px;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    #entrar {
+        width: 280px;
+        height: 50px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #8e3997;
+        border-radius: 20px;
+    }
+
+    #admin {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border-radius: 20px;
+    }
+
+    .home-img2 img{
+        width: 25vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+@media (max-width: 1090px) {
+    .home2 {
+        flex-direction: column; /* Coloca los elementos de manera vertical */
+    }
+
+    .senago {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 5rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 3.5rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 400px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .home2 .home-content2 a {
+        color: #333;
+        margin-top: 30px;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    #entrar {
+        width: 350px;
+        height: 60px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+        background-color: #8e3997;
+        border-radius: 20px;
+    }
+
+    #admin {
+        width: 400px;
+        height: 70px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border-radius: 20px;
+    }
+
+    .home-img2 img{
+        width: 30vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .senago {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 3.5rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 2.5rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 300px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .home2 .home-content2 a {
+        color: #333;
+        margin-top: 30px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    #entrar {
+        width: 280px;
+        height: 50px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #8e3997;
+        border-radius: 20px;
+    }
+
+    #admin {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border-radius: 20px;
+    }
+
+    .home-img2 img{
+        width: 35vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .senago {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 3.5rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 2.5rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 300px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .home2 .home-content2 a {
+        color: #333;
+        margin-top: 30px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    #entrar {
+        width: 280px;
+        height: 55px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #8e3997;
+        border-radius: 20px;
+    }
+
+    #admin {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border-radius: 20px;
+    }
+
+    .home-img2 img{
+        width: 35vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 412px) {
+    .senago {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .home2 .home-content2 h1 {
+        font-size: 3.8rem;
+    }
+
+    .home2 .home-content2 label {
+        font-size: 2rem;
+    }
+    
+    .home2 .home-content2 input {
+        width: 250px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 1.3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #entrar {
+        width: 230px;
+        height: 50px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: white;
+        background-color: #8e3997;
+        border-radius: 20px;
+    }
+
+    #admin {
+        width: 250px;
+        height: 50px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border-radius: 20px;
+    }
+
+    .home-img2 img{
+        width: 45vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}

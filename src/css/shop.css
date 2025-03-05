@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: url('../img/background.png');
+    background-size: cover;  /* Para que cubra toda la pantalla */
+    background-position: center center;  /* Para centrar la imagen */
+    color: black;
+}
+
+header {
+    opacity: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre h1, search-container y icon-container */
+    background-color: #3aaa35;
+    box-shadow: 0 0 25px #3aaa35;
+    color: white;
+    padding: 1rem 4rem;
+    height: 10vh; /* Fijamos una altura para el header */
+}
+
+header h1{
+    font-size: 5rem;
+    white-space: nowrap; /* Asegura que el título no se divida */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el input y el icono */
+    flex-grow: 1; /* Permite que ocupe el espacio central disponible */
+}
+
+.search-container input {
+    width: 60%; /* Ajusta el tamaño del input */
+    height: 40px;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    border-radius: 20px;
+    border: none;
+}
+
+.search-container i {
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+.search-container i:hover {
+    cursor: pointer;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container i {
+    padding: 1rem;
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.fa-arrow-circle-up {
+    font-size: 4rem;
+}
+
+#scrollBtn {
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#scrollBtn:hover {
+    color: #3aaa35;
+    transform: scale(1.1) translateY(-5px);
+}
+
+#downBtn {
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#downBtn:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+article {
+    border: 2px solid black; /* Borde negro */
+    background-color: white;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    opacity: 97%;
+}
+
+.senago {
+    border: 2px solid black; /* Borde negro */
+    background-color: white;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    opacity: 97%;
+}
+
+#login {
+    text-align: center;
+    background: #3aaa35;
+    border: 2px solid black; /* Borde negro */
+    
+}
+
+section {
+    min-height: 50vh;
+    padding: 4rem 3% 4rem;
+}
+
+.home {
+    display: flex;                    /* Usamos flexbox para alinear contenido */
+    flex-direction: column;              /* Coloca los elementos de manera vertical */
+    justify-content: center;           /* Centra el contenido horizontalmente */
+    align-items: center;               /* Centra el contenido verticalmente */
+    background-color: #ffffffc7;
+    overflow: hidden;
+    position: relative;                /* Asegúrate de que el contenedor tenga la posición relativa */
+    height: 100%;                      /* Asegura que ocupe el 100% de la altura */
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fa-arrow-circle-down {
+    font-size: 4rem;
+    animation: bounce 2s ease infinite;
+}
+
+span {
+    color: #3aaa35;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 10%;
+    transition: 0.2s linear;
+    animation: bounce 2s ease infinite;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #72277a;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 1rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #8e3997;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #8e3997;
+    box-shadow: 0 0 25px #8e3997;
+    border: 0.2rem solid #8e3997;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    margin: 0 1.5rem 3rem 0;
+    background-color: #ffffffc7;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #3aaa35;
+    font-weight: 600;
+    border: 2px solid #3aaa35;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #3aaa35;
+    color: black;
+    box-shadow: 0 0 25px #3aaa35;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); } /* Al inicio y al final el ícono está en su posición original */
+    30% { transform: translateY(-10%); } /* Sube un poco */
+    50% { transform: translateY(0); }  /* Vuelve a la posición inicial */
+    70% { transform: translateY(-7%); } /* Sube un poco menos */
+    90% { transform: translateY(0); }  /* Vuelve a la posición inicial */
+}
+
+.typing-text {
+    font-size: 4vw;
+    font-weight: 600;
+    min-width: 280px;
+    white-space: nowrap;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span:before {
+    content: "simplifica tu compra";
+    color:#3aaa35;
+    animation: words 20s infinite;
+}
+
+.typing-text span:after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+footer {
+    font-size: 3rem;
+    font-weight: 600;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 3px solid #3aaa35;
+    }
+}
+
+@keyframes words {
+    0%, 20%{
+        content: "simplifica tu compra";
+    }
+    21%, 40%{
+        content: "mejora tu compra"
+    }
+    41%, 60%{
+        content: "se adapta a tu compra"
+    }
+    61%, 80%{
+        content: "agiliza tu compra";
+    }
+    81%, 100%{
+        content: "potencia tu compra"
+    }
+}
+
+@media (max-width: 1180px) {
+
+    article {
+        margin-top: 60px;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 4rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home-content {
+        font-size: 1rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el texto */
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .typing-text {
+        font-size: 2rem;
+    }
+
+    .home-img img{
+        width: 40vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1140px) {
+
+    article {
+        margin-top: 40px;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 4rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 3.5rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home-img img{
+        width: 40vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1030px) {
+
+    article {
+        margin-top: 40px;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 3rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    article {
+        margin-top: 40px;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 3rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 995px) {
+    article {
+        margin-top: 40px;
+    }
+
+    section {
+        padding: 4rem 4% 4rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 3rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 910px) {
+    article {
+        margin-top: 60px;
+    }
+
+    section {
+        padding: 4rem 4% 4rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 2.5rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 820px) {
+    article {
+        margin-top: 90px;
+    }
+
+    section {
+        padding: 4rem 5% 4rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 2rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 50vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    article {
+        margin-top: 70px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    section {
+        padding: 4rem 5% 4rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 2.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 685px) {
+    header {
+        justify-content: flex-start; /* Mueve los elementos al inicio */
+    }
+    
+    header h1 {
+        display: none; /* Oculta el texto "SENA GO" */
+    }
+
+    .search-container {
+        justify-content: flex-start;
+    }
+
+    .search-container input{
+        width: 100%; /* Cuando se muestra, ocupa todo el ancho */
+        position: fixed; /* Fija la barra a la izquierda */
+        border-radius: 0;
+        top: 65px;
+        left: 0;
+        z-index: 100; /* Asegura que esté por encima de otros elementos */
+        box-shadow: 0 0 25px #333;
+        height: 0; /* Inicia con altura 0 */
+        padding: 0; /* Sin padding para que no ocupe espacio */
+        opacity: 0; /* Invisible al principio */
+        transition: height 0.3s ease, padding 0.3s ease, opacity 0.3s ease; /* Animación suave para la altura y opacidad */
+    }
+
+    .search-container input:focus{
+        position: fixed; /* Fija la barra a la izquierda */
+        top: 43px;
+    }
+
+    .search-container input.show{
+        height: 40px; /* Altura del input cuando se muestra */
+        padding: 0 1rem; /* Padding para que se vea bien */
+        opacity: 1; /* Hacer visible el input */
+    }
+
+    .icon-container {
+        margin-left: 1rem; /* Espacio entre el campo de búsqueda y los íconos */
+    }
+
+    article {
+        margin-top: 100px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    section {
+        padding: 4rem 5% 4rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 610px) {
+    article {
+        margin-top: 130px;
+    }
+
+    section {
+        padding: 3rem 5% 3rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .home .home-content .btn {
+        font-size: 1.2rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 545px) {
+    article {
+        margin-top: 140px;
+    }
+
+    section {
+        padding: 2rem 5% 2rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 2.7rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .home .home-content .btn {
+        font-size: 1.2rem;
+        display: block;
+        margin: 0 3rem 3rem 2.5rem;
+        width: 250px;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 412px) {
+    article {
+        margin-top: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    section {
+        padding: 2rem 5% 2rem;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3rem; /* Ajusta el tamaño del icono */
+    }
+
+    .home .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home .home-content .typing-text {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .home .home-content .btn {
+        font-size: 1.2rem;
+        display: block;
+        margin: 0 3rem 3rem 4rem;
+        width: 200px;
+    }
+
+    .social-icons {
+        margin-left: 20px;
+    }
+
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .home{
+        gap: 4rem
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 50vw;
+        margin-top: 1rem;
+    }
+}
